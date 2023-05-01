@@ -4,6 +4,7 @@
 ## https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
 
 import sys
+from typing import List
 
 class Solution:
     def average(self, salary: List[int]) -> float:
@@ -22,7 +23,7 @@ class Solution:
 
             total_sum += sal
 
-        return (total_sum - minimum - maximum) / len(salary) - 2
+        return (total_sum - minimum - maximum) / (len(salary) - 2)
 
 
 ## Test
